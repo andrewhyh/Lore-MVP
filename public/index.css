@@ -1,0 +1,23 @@
+/* Public index.css — ensures /index.css exists at runtime so Vite/Caddy won't return index.html for CSS requests.
+   Add global rules or import generated CSS here if you adopt a bundling pipeline later.
+*/
+
+/* Minimal sensible defaults */
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0f172a; /* keep background consistent with inline styles */
+  color: #e6eef8;
+}
+
+/* Small helper to avoid unstyled flashes for the main container */
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
